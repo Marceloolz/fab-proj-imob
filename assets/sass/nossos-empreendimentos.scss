@@ -1,0 +1,101 @@
+.NossosEmpreendimentos {
+  display: flex;
+  justify-content: center;
+  padding: 104px 0px;
+  .NossosEmpreendimentos_Container {
+    max-width: 1200px;
+    width: 90%;
+    .NossosEmpreendimentos_Container_Titulo {
+      color: #404243;
+      font-family: "Lobster Two", cursive;
+      font-size: 40px;
+      line-height: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: inherit;
+      margin: inherit;
+      &:after {
+        content: " ";
+        display: block;
+        width: 104px;
+        height: 4px;
+        background-image: linear-gradient(
+          45deg,
+          #ff9100 0,
+          #ffbc3f 50%,
+          #ff9100 50%
+        );
+        margin-top: 24px;
+        margin-bottom: 16px;
+        border-radius: 100px;
+      }
+    }
+    .NossosEmpreendimentos_Container_Cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 32px;
+      margin-top: 32px;
+      .Container_Cards_Item {
+        width: calc(100% - 32px);
+        min-height: 200px;
+        background-color: #202020;
+        border-radius: 12px;
+        display: flex;
+        align-items: flex-end;
+        padding: 16px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+        &:after {
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient(
+            360deg,
+            #242424,
+            #000000ab,
+            #ffffff00,
+            #00000000
+          );
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 12px;
+        }
+        &:hover {
+          -webkit-transition: 2s ease-in;
+          -moz-transition: 2s ease-in;
+          -o-transition: 2s ease-in;
+          transition: 2s ease-in;
+          background-size: 200%;
+        }
+        .Cards_Item_Content {
+          z-index: 2;
+          .Item_Content_Label {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 700;
+          }
+          .Item_Content_Principal {
+            font-family: "Lobster Two", cursive;
+            color: $Color2;
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .NossosEmpreendimentos {
+    display: none !important;
+  }
+}

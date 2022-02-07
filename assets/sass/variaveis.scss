@@ -1,0 +1,30 @@
+$Color1: #fff;
+$Color2: #ed9d0f;
+
+%Hover {
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+%ScrollPersonalizado {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  ::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+  ::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #2d2d2d45;
+    border-radius: 10px;
+    border: 2px solid #fff;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,93 @@
+.SegundoBloco_Contato {
+  background-color: #313131;
+  padding: 16px 24px;
+  border-radius: 16px;
+  .SegundoBloco_Contato_Titulo {
+    color: $Color1;
+    font-family: "Lobster Two", cursive;
+    font-size: 40px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px;
+    margin: inherit;
+    &:after {
+      content: " ";
+      display: block;
+      width: 104px;
+      height: 4px;
+      background-image: linear-gradient(
+        45deg,
+        #ff9100 0,
+        #ffbc3f 50%,
+        #ff9100 50%
+      );
+      margin-top: 24px;
+      margin-bottom: 16px;
+      border-radius: 100px;
+    }
+  }
+  .SegundoBloco_Contato_Subtitulo {
+    color: $Color1;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+  .SegundoBloco_Contato_Form {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+    .Contato_Form_Item {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 6px;
+      .Form_Item_Label {
+        color: $Color2;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+      }
+      .Form_Item_Input {
+        outline: none;
+        background-color: #252525;
+        border: 2px solid #252525;
+        padding: 12px 8px;
+        width: calc(100% - 16px);
+        border-radius: 2px;
+        color: $Color1;
+        @extend %Hover;
+        &:focus {
+          background-color: $Color1;
+          border-color: #ffaf2d;
+          color: #505050;
+        }
+      }
+      .Form_Item_Aviso {
+        font-size: 12px;
+        color: #db5b5b;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+    .Contato_Form_Button {
+      color: $Color1;
+      background-image: linear-gradient(
+        45deg,
+        #ff9100 0,
+        #ffbc3f 50%,
+        #ff9100 50%
+      );
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: 4px;
+      border: 4px solid #ffc252;
+      box-shadow: 0 0 16px #ffb93b57;
+      cursor: pointer;
+    }
+  }
+}
