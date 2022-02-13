@@ -191,12 +191,12 @@
   }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 640px) {
   .Header {
     .Header_Container {
       .Header_Container_Logotipo {
         img {
-          max-width: 70%;
+          max-width: 100%;
         }
       }
     }
