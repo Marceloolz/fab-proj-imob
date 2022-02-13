@@ -3,8 +3,7 @@
   justify-content: center;
   padding: 104px 0px;
   .NossosEmpreendimentos_Container {
-    max-width: 1200px;
-    width: 90%;
+    max-width: 100%;
     .NossosEmpreendimentos_Container_Titulo {
       color: #404243;
       font-family: "Lobster Two", cursive;
@@ -33,10 +32,52 @@
       }
     }
     .NossosEmpreendimentos_Container_Cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 32px;
       margin-top: 32px;
+      .slick-arrow {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-image: linear-gradient(
+          45deg,
+          #ff9100 0,
+          #fda80a 50%,
+          #ff9100 50%
+        );
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        box-shadow: 0 0 12px #ffb4346b;
+        color: #fff;
+        font-size: 24px;
+        position: absolute;
+        top: 40%;
+        &.fa-chevron-left {
+          left: 0px;
+        }
+        &.fa-chevron-right {
+          right: 0px;
+        }
+      }
+      .slick-dots {
+        li {
+          @extend %Hover;
+          cursor: pointer;
+          width: 12px;
+          height: 12px;
+          background-color: #d1d1d1;
+          border-radius: 100px;
+          margin-top: 8px;
+          &.slick-active {
+            background-color: #fda80a;
+            width: 32px;
+          }
+          button {
+            display: none;
+          }
+        }
+      }
       .Container_Cards_Item {
         width: calc(100% - 32px);
         min-height: 200px;
@@ -49,6 +90,7 @@
         background-repeat: no-repeat;
         background-size: 150%;
         background-position: center;
+        margin: 16px;
         &:after {
           content: " ";
           display: block;
@@ -91,11 +133,5 @@
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .NossosEmpreendimentos {
-    display: none !important;
   }
 }

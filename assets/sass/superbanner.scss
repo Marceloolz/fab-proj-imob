@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: animaBG 200s infinite;
   &:after {
     content: " ";
     display: block;
@@ -97,6 +98,12 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .SuperBanner {
+    animation: inherit;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .SuperBanner {
     padding-top: 104px;
@@ -111,5 +118,17 @@
         line-height: 26px;
       }
     }
+  }
+}
+
+@keyframes animaBG {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 150%;
+  }
+  100% {
+    background-size: 100%;
   }
 }
