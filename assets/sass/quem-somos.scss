@@ -57,10 +57,10 @@
       font-weight: 400;
     }
     .QuemSomos_Container_Cards {
+      margin-top: 32px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 24px;
-      margin-top: 32px;
       .Container_Cards_Item {
         @extend %Hover;
         display: flex;
@@ -130,7 +130,14 @@
       .SegundoBloco_QuemSomos {
         .SegundoBloco_QuemSomos_Container {
           .QuemSomos_Container_Cards {
-            grid-template-columns: 1fr;
+            display: flex;
+            grid-gap: inherit;
+            .slick-arrow {
+              top: 30%;
+            }
+            .Container_Cards_Item {
+              margin: 0px 8px;
+            }
           }
         }
       }

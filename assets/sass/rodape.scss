@@ -1,0 +1,84 @@
+.Rodape {
+  display: flex;
+  justify-content: center;
+  padding: 64px 0px;
+  background-color: #161616;
+  .Rodape_Container {
+    width: 1200px;
+    max-width: 90%;
+    .Rodape_Container_Row {
+      .Container_Row_Blocks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .Row_Blocks_Item {
+          .Blocks_Item_Titulo {
+            color: $Color2;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 700;
+          }
+          ul {
+            padding: inherit;
+            display: grid;
+            grid-gap: 8px;
+            li {
+              @extend %Hover;
+              color: $Color1;
+              list-style-type: none;
+              padding: inherit;
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: 300;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              a {
+                @extend %Hover;
+                color: inherit;
+                text-decoration: none;
+              }
+              &:before {
+                @extend %Hover;
+                opacity: 0.1;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                content: "\f054";
+                display: block;
+                width: 16px;
+                height: 16px;
+              }
+              &:hover {
+                color: $Color2;
+                &:before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+      .Container_Row_Copyright {
+        color: $Color1;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+        margin: 32px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Rodape {
+    .Rodape_Container {
+      .Rodape_Container_Row {
+        .Container_Row_Blocks {
+          grid-template-columns: 1fr;
+          grid-gap: 32px;
+        }
+      }
+    }
+  }
+}

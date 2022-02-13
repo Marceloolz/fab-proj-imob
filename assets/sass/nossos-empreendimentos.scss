@@ -33,51 +33,6 @@
     }
     .NossosEmpreendimentos_Container_Cards {
       margin-top: 32px;
-      .slick-arrow {
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        background-image: linear-gradient(
-          45deg,
-          #ff9100 0,
-          #fda80a 50%,
-          #ff9100 50%
-        );
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100px;
-        box-shadow: 0 0 12px #ffb4346b;
-        color: #fff;
-        font-size: 24px;
-        position: absolute;
-        top: 40%;
-        &.fa-chevron-left {
-          left: 0px;
-        }
-        &.fa-chevron-right {
-          right: 0px;
-        }
-      }
-      .slick-dots {
-        li {
-          @extend %Hover;
-          cursor: pointer;
-          width: 12px;
-          height: 12px;
-          background-color: #d1d1d1;
-          border-radius: 100px;
-          margin-top: 8px;
-          &.slick-active {
-            background-color: #fda80a;
-            width: 32px;
-          }
-          button {
-            display: none;
-          }
-        }
-      }
       .Container_Cards_Item {
         width: calc(100% - 32px);
         min-height: 200px;
