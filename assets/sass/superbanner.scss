@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: animaBG 200s infinite;
+  animation: animaBG 1000s infinite;
   &:after {
     content: " ";
     display: block;
@@ -24,11 +24,14 @@
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     max-width: 90%;
     width: 1200px;
-    .SuperBanner_Container_Titulo {
+    .SuperBanner_Container_Content {
+      max-width: 480px;
+    }
+    .Container_Content_Titulo {
       color: $Color1;
       font-family: "Lobster Two", cursive;
       font-size: 56px;
@@ -36,11 +39,10 @@
       font-weight: 500;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       padding: inherit;
       margin: inherit;
-      text-align: center;
       &:after {
         content: " ";
         display: block;
@@ -57,13 +59,13 @@
         border-radius: 100px;
       }
     }
-    .SuperBanner_Container_Subtitulo {
+    .Container_Content_Subtitulo {
       color: $Color1;
-      text-align: center;
       font-size: 24px;
       line-height: 32px;
       font-weight: 300;
-      .Container_Subtitulo_Destaque {
+      display: block;
+      .Content_Subtitulo_Destaque {
         color: $Color2;
         font-weight: 700;
       }
