@@ -1,0 +1,57 @@
+.Duvidas{
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 56px 0px;
+    .Duvidas_Container{
+        max-width: 1200px;
+        width: 90%;
+        .Duvidas_Container_Titulo{
+            color: #3c3c3c;
+            font-family: "Patua One",sans-serif;
+            font-size: 48px;
+            line-height: 56px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: inherit;
+            margin: inherit;
+        }
+    }
+    .FAQ_Container_Lista {
+        margin: 40px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 24px;
+        .Container_Lista_Item {
+            background-color: $Color1;
+            @extend %Hover;
+            padding: 16px 12px;
+            border-radius: 4px;
+            border-left: 6px solid #e0e0e0;
+            cursor: pointer;
+            height: fit-content;
+            min-height: 0px;
+            .Lista_Item_Titulo {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 700;
+                color: #404040;
+            }
+            .Lista_Item_Texto {
+                margin-top: 8px;
+                display: none;
+                font-size: 16px;
+                line-height: 24px;
+                color: #444;
+            }
+            &.__is-active {
+                border-left: 6px solid $Color2;
+                .Lista_Item_Texto {
+                    display: block;
+                }
+            }
+        }
+    }
+}

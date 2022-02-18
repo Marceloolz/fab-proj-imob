@@ -44,6 +44,7 @@ a {
 @import "cases-de-sucesso.scss";
 @import "rodape.scss";
 @import "modal-projeto.scss";
+@import "duvidas.scss";
 
 .preloader {
   position: fixed;
@@ -89,6 +90,28 @@ a {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 32px;
+  }
+}
+
+.BTN_CallToAction{
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  font-size: 32px;
+  background-color: #3fd7a5;
+  padding: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  box-shadow: 0px 0 20px #00000026;
+  z-index: 5;
+  color: #fff;
+  a{
+    text-decoration: none;
+    color: inherit;
   }
 }
 
